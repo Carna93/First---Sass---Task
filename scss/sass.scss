@@ -1,0 +1,132 @@
+@import 'vars';
+@import 'mixins';
+header{
+    nav{
+        text-align: center;        
+        a{
+            margin: auto;
+            color: $boja-treca;
+            text-decoration: none;
+        }
+    }      
+}
+main{
+    div{
+        margin: auto;
+        color: $boja-treca;
+    
+    }    
+    h1, h3, form{
+        text-align: center;
+        color: $boja-prva;
+    }
+    .prvaSekcija{
+        background-image: url('../images/bkg1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 400px;
+        width: $sirina-prveSekcije;
+        @include centriranjaSivo();
+        .prveSekcije{
+            padding: 200px;
+        }
+    }
+    .drugaSekcija{
+        width: $sirina-drugeTreceSekcije;
+        @include centriranjaSivo();
+        .centriran{
+            text-align: center;
+        }
+        .dvekolone{
+            column-count: 2;
+            text-align: justify;
+        }
+    
+        .trikolone{
+            display: inline-block;
+            width: 28.4%;
+            min-height: 400px;
+            padding: 1em;
+            text-align: center;
+            border: 1px solid $boja-druga;
+            vertical-align: top;
+        }
+    }
+    .trecaSekcija{
+        width: $sirina-drugeTreceSekcije;
+        min-height: 300px;
+        @include centriranjaSivo();
+        form{
+            float: left; 
+            width: 50%;
+            text-align: left;
+            min-height: 150px;
+            margin: 25px auto 25px auto;
+       
+            input, textarea{ 
+                display: inline-block;
+                width: $sirina-forme;
+                border: 1px solid $boja-prva;
+            }
+            .prviRed{
+                @include triReda();
+            }
+            .drugiRed{
+                @include triReda();
+            }
+            .treciRed{
+                @include triReda();
+            }
+            input[type=submit]{
+                width: 25%;
+                margin: 1% 0 0 57%;
+                background-color: $boja-prva;
+                color: $boja-cetiri;
+            }
+        }
+        img{
+            float: left;
+            width: 40%;
+            height: 200px;
+        }
+    }
+}
+footer{
+    margin: auto;
+    text-align: center;
+    background-color: $boja-druga; 
+    color: $boja-cetiri;
+}
+
+@media screen and (max-width:600px){
+    main{
+        .prvaSekcija{
+            .prveSekcije{
+                padding: 100px;
+            }
+        }
+        .drugaSekcija{
+        
+            .trikolone{
+                display: inline-block;
+                width: 90%;
+                min-height: 400px;
+                padding: 1em;
+                text-align: center;
+                border: 1px solid $boja-druga;
+                vertical-align: top;
+                margin-bottom: 0.5em;
+            }
+        }
+        .trecaSekcija{
+            form{ 
+                width: 60%;
+            }
+            img{
+                width: 40%;
+            }
+        }
+    }
+    
+    
+}       

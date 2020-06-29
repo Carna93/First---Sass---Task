@@ -1,0 +1,10 @@
+@mixin centriranjaSivo{
+    margin: auto;
+    text-align: center;
+    color: $boja-treca;
+}
+@mixin triReda{
+    display: inline-block;
+    width: $sirina-forme;
+    padding-bottom: 1em;
+}
